@@ -7,7 +7,7 @@ reports = []
 for line in lines:
     reports.append(line.split())
 
-totalUnsafe = 0
+totalSafe = 0
 totalReports = len(reports)
 
 reportTypes = defaultdict(list)
@@ -53,6 +53,6 @@ for key, value in reportTypes.items():
                 penalties += 1
                 break
     if penalties < len(value):
-        totalUnsafe += 1
+        totalSafe += 1
 
-print(totalUnsafe)
+print(totalSafe)
